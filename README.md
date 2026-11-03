@@ -8,26 +8,26 @@ Maka saya melakukan percobaan analisis menggunakan metode TURF untuk mencari tah
 
 Asumsi utama dalam percobaan ini yaitu karakteristik konsumen terdahulu dapat dikombinasikan sedemikian rupa guna menghasilkan luasan jangkauan pasar yang maksimal, sehingga distribusi pemasaran bisa diarahkan dengan jauh lebih efektif. Diasumsikan pula bahwa perhitungan menggunakan metrik eksplisit dari TURF (*reach*, *frequency*, *overlap*) memiliki tingkat keakuratan yang lebih tinggi dalam mempresentasikan prospek potensi pembeli dibandingkan dengan model segmentasi tradisional.
 
-**Import Library & Tech Stack**
+# **Import Library & Tech Stack**
 Ekstraksi, transformasi, dan analisis pada projek ini dibangun menggunakan Tech Stack berikut:
 
-* **Python (Pandas & NumPy)**: Digunakan untuk membaca dataset dari format CSV, menangani tipe data bernilai kosong, dan melakukan manipulasi *dataframe* hingga siap diproses.
+**Python (Pandas & NumPy)**: Digunakan untuk membaca dataset dari format CSV, menangani tipe data bernilai kosong, dan melakukan manipulasi *dataframe* hingga siap diproses.
 
 
-* **Itertools**: Digunakan secara khusus pada fungsi TURF untuk menyusun pola kombinasi matematis dari berbagai fitur pelanggan dalam pencarian persentase jangkauan terbaik.
+**Itertools**: Digunakan secara khusus pada fungsi TURF untuk menyusun pola kombinasi matematis dari berbagai fitur pelanggan dalam pencarian persentase jangkauan terbaik.
 
 
-* **Matplotlib & Seaborn**: Digunakan untuk tahap visualisasi data eksploratif (EDA) guna memetakan profil data tabel dan menyajikan hasil analisis kombinasi ke dalam grafik *bar chart* horisontal.
+**Matplotlib & Seaborn**: Digunakan untuk tahap visualisasi data eksploratif (EDA) guna memetakan profil data tabel dan menyajikan hasil analisis kombinasi ke dalam grafik *bar chart* horisontal.
 
 
-* **Pingouin, SciPy, Scikit-Learn**: Digunakan sebagai pustaka komputasi pendukung dalam kalkulasi statistik tingkat lanjut, perhitungan jarak Mahalanobis, serta kovarians matrik.
+**Pingouin, SciPy, Scikit-Learn**: Digunakan sebagai pustaka komputasi pendukung dalam kalkulasi statistik tingkat lanjut, perhitungan jarak Mahalanobis, serta kovarians matrik.
 
 
 
-**Pengumpulan Data**
+# **Pengumpulan Data**
 Data dikumpulkan melalui dataset profil kepemilikan kendaraan ("Car Ownership.csv") yang mencakup 500 baris rekaman. Data mentah ini memuat informasi profesi, pendapatan bulanan, skor kredit konsumen, riwayat lamanya bekerja, status finansial, riwayat keuangan masa lalu, kepemilikan mobil, dan jumlah anak yang masih berupa format belum seragam.
 
-**Preprocessing**
+# **Preprocessing**
 Pendekatan preprocessing dilakukan secara sistematis untuk memastikan model TURF menerima input angka biner dan kelompok data yang bersih:
 
 * **Data Cleaning & Imputation**: Menghapus seluruh baris data yang kosong secara absolut (NaN pada semua sumbu), kemudian mengatasi *missing value* dengan mengubah input *string* kosong, elemen 'na', dan elemen NaN pada variabel jumlah anak dan durasi masa kerja menjadi nominal 0.
@@ -40,7 +40,7 @@ Pendekatan preprocessing dilakukan secara sistematis untuk memastikan model TURF
 
 
 
-**Key Insights (Hasil Temuan)**
+# **Key Insights (Hasil Temuan)**
 Berdasarkan penerapan simulasi metode TURF pada matriks kombinasi karakteristik konsumen, diperoleh temuan strategis sebagai berikut:
 
 * **Pencarian Skenario Penjangkauan Target (*Reach*)**: Sistem menguji kombinasi maksimal sebanyak 3 karakteristik pelanggan (*Maksimal Kombinasi Fitur*) dengan harapan skenario tersebut mampu menyentuh target penetrasi persentase pasar minimal di angka 90% audiens yang benar-benar melakukan pembelian mobil.
@@ -50,7 +50,7 @@ Berdasarkan penerapan simulasi metode TURF pada matriks kombinasi karakteristik 
 
 
 
-**Visualisasi Data Eksploratif (EDA)**
+# **Visualisasi Data Eksploratif (EDA)**
 Tahap ini memuat penggambaran grafik batang bar chart secara horisontal dengan warna hijau kustom menggunakan pustaka Matplotlib untuk memaparkan urutan "Top 10 Kombinasi Karakteristik Konsumen Berdasarkan Reach (TURF)". Grafik ini juga diintegrasikan dengan proyeksi garis batas (*axvline*) putus-putus berwarna merah yang berlabuh pada poros X untuk memberikan penanda yang jelas apakah persentase tersebut sudah melewati target KPI 90% atau belum.
 
 Tertarik dengan proses dan penulisan kode analisis di balik layar?
