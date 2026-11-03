@@ -1,7 +1,6 @@
 # Analisis-TURF-Menentukan-Karakteristik-Konsumen-Paling-Potensial-dalam-Pembelian-Mobil
 End-to-end data Analisis TURF Menentukan Karakteristik Konsumen Paling Potensial dalam Pembelian Mobil
 
-**Analisis TURF untuk Menentukan Kombinasi Karakteristik Konsumen yang Paling Potensial dalam Pembelian Mobil**
 
 Industri otomotif saat ini menghadapi persaingan yang sangat ketat, sehingga perusahaan harus memahami siapa calon pembeli atau pihak pengaju kredit yang memiliki potensi pasar paling besar. Strategi pemasaran umum seringkali tidak berhasil karena tidak semua konsumen memiliki kebutuhan, preferensi, dan daya beli yang seragam. Oleh karena itu, perusahaan harus melakukan segmentasi pasar berdasarkan rekaman data pelanggan sebelumnya untuk mengidentifikasi karakteristik konsumen secara terperinci. Dengan memetakan karakteristik pembeli tersebut, perusahaan dapat menyesuaikan target promosinya sehingga angka penjualan dan pengajuan kredit mobil bisa meningkat secara efektif.
 
